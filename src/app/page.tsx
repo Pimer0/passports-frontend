@@ -17,13 +17,22 @@ export default function Home() {
 					Trouvez tout les avantages qui viennent avec un passeport en
 					particulier.
 				</p>
-				<div>
+				<div className="flex flex-row gap-5">
 					<Button
 						text={"API"}
 						onClick={() =>
 							router.push("https://passportmagician.com/swagger/index.html")
 						}
 					>
+						<GoArrowUpRight color="#1E4147" />
+					</Button>
+					<Button
+						text={"Portfolio"}
+						onClick={() => router.push("https://www.paulmerandon.fr/")}
+					>
+						<GoArrowUpRight color="#1E4147" />
+					</Button>
+					<Button text={"Pays"} onClick={() => router.push("/pays")}>
 						<GoArrowUpRight color="#1E4147" />
 					</Button>
 				</div>
