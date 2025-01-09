@@ -9,7 +9,7 @@ export default function Home() {
 
 	return (
 		<main className="flex flex-col gap-8 items-center sm:items-center">
-			<div className="flex gap-4 items-center flex-col sm:flex-col">
+			<div className="flex gap-4 items-center flex-col sm:flex-col m-6">
 				<h1 className={`text-[#1E4147] text-5xl text-left ${barlow.className}`}>
 					Quel passeport avoir ?
 				</h1>
@@ -19,20 +19,19 @@ export default function Home() {
 				</p>
 				<div className="flex flex-row gap-5">
 					<Button
+						text={"Pays"}
+						onClick={() => router.push("/pays")}
+						colorClass="bg-[#1E4147]"
+						hoverColorClass="hover:bg-[#ffff] hover:text-[#1E4147]"
+					>
+						<GoArrowUpRight color="#ffff" />
+					</Button>
+					<Button
 						text={"API"}
 						onClick={() =>
 							router.push("https://passportmagician.com/swagger/index.html")
 						}
 					>
-						<GoArrowUpRight color="#1E4147" />
-					</Button>
-					<Button
-						text={"Portfolio"}
-						onClick={() => router.push("https://www.paulmerandon.fr/")}
-					>
-						<GoArrowUpRight color="#1E4147" />
-					</Button>
-					<Button text={"Pays"} onClick={() => router.push("/pays")}>
 						<GoArrowUpRight color="#1E4147" />
 					</Button>
 				</div>
